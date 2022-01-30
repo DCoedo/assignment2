@@ -44,7 +44,7 @@ class Assignment2:
     @staticmethod #task 6
     def connectTCP(host = str, port = int):
         try:
-                socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 s.connect((host, port))
                 return True
         except:
