@@ -42,7 +42,7 @@ class Assignment2:
         return (len(string) >= 9 and string[0].islower() and num == 1)
 
     @staticmethod #task 6
-    def connectTCP(host:str, port:int):
+    def connectTCP(host = str, port = int):
         try:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
                 s.connect((host, port))
